@@ -135,12 +135,12 @@ export function Pricing() {
             href="https://app.devhub.sh"
             features={[
               'Unlimited users',
-              'GitHub Integration',
-              'Linear Integration',
-              'Engineer scheduling/priority tracking',
+              'GitHub integration',
+              'Linear integration',
+              'Priority planning',
               'Code coverage tracking',
               'Self hosting option available',
-              'OIDC login (with self hosting)',
+              'OIDC login',
               'includes license for QueryDesk',
             ]}
           />
