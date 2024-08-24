@@ -31,6 +31,21 @@ export default {
       maxWidth: {
         '2xl': '40rem',
       },
+      colors: {
+        gray: {
+          50: "#f6f7f9",
+          100: "#ebeef3",
+          200: "#d3dae4",
+          300: "#adbacc",
+          400: "#8195af",
+          500: "#617996",
+          600: "#4c607d",
+          700: "#3f4e65",
+          800: "#374355",
+          900: "#2b3340",
+          950: "#212630",
+        },
+      },
     },
   },
   plugins: [formsPlugin, headlessuiPlugin],
