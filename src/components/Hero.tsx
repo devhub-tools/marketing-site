@@ -12,7 +12,7 @@ export function Hero() {
         into your engineering team
       </h1>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="https://app.devhub.sh" color="blue">Get started</Button>
+        <Button href="https://app.devhub.tools" color="blue">Get started</Button>
       </div>
     </Container>
   )

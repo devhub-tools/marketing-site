@@ -75,7 +75,7 @@ function MobileNavigation() {
         <MobileNavLink href="#features">Features</MobileNavLink>
         <MobileNavLink href="#pricing">Pricing</MobileNavLink>
         <hr className="m-2 border-slate-300/40" />
-        <MobileNavLink href="https://app.devhub.sh">Sign in</MobileNavLink>
+        <MobileNavLink href="https://app.devhub.tools">Sign in</MobileNavLink>
       </PopoverPanel>
     </Popover>
   )
@@ -97,9 +97,9 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="https://app.devhub.sh">Sign in</NavLink>
+              <NavLink href="https://app.devhub.tools">Sign in</NavLink>
             </div>
-            <Button href="https://app.devhub.sh" color="blue">
+            <Button href="https://app.devhub.tools" color="blue">
               <span>
                 Get started
               </span>

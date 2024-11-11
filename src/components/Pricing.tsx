@@ -132,7 +132,7 @@ export function Pricing() {
             name="Business"
             price="$350/month"
             description="For businesses that want metrics for their engineering team."
-            href="https://app.devhub.sh"
+            href="https://app.devhub.tools"
             features={[
               'Unlimited users',
               'GitHub integration',
@@ -148,9 +148,9 @@ export function Pricing() {
             name="Custom"
             price="Contact us"
             description="For businesses that need custom integrations or metrics."
-            href="https://app.devhub.sh"
+            href="https://app.devhub.tools"
             features={[
-              'Contact us at support@devhub.sh',
+              'Contact us at support@devhub.tools',
               'Support for other code repositories',
               'Support for other ticketing systems',
               'Custom metrics',
