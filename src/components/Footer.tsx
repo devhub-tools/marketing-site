@@ -17,11 +17,11 @@ export function Footer() {
             </div>
           </nav>
         </div>
-        <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
+        <div className="flex flex-col items-center border-t border-gray-400/10 py-10 sm:flex-row-reverse sm:justify-between">
           <div className="flex gap-x-6">
-            <Link href="https://github.com/devhub-tools" className="group" aria-label="DevHub on GitHub">
+            <Link href="https://github.com/devhub-tools" target="_blank" className="group" aria-label="Devhub on GitHub">
               <svg
-                className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
+                className="h-6 w-6 fill-gray-500 group-hover:fill-gray-700"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
               >
@@ -29,8 +29,8 @@ export function Footer() {
               </svg>
             </Link>
           </div>
-          <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} DevHub. All rights
+          <p className="mt-6 text-sm text-gray-500 sm:mt-0">
+            Copyright &copy; {new Date().getFullYear()} Devhub. All rights
             reserved.
           </p>
         </div>

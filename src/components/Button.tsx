@@ -11,16 +11,16 @@ const baseStyles = {
 const variantStyles = {
   solid: {
     slate:
-      'bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900',
-    blue: 'bg-sky-600 text-white hover:text-slate-100 hover:bg-sky-500 active:bg-sky-800 active:text-sky-100 focus-visible:outline-sky-600',
+      'bg-gray-900 text-gray-50 hover:bg-gray-700 hover:text-gray-100 active:bg-gray-800 active:text-gray-300 focus-visible:outline-gray-900',
+    blue: 'bg-blue-400 text-gray-50 hover:bg-blue-300 active:bg-blue-500 active:text-blue-100 focus-visible:outline-blue-300',
     white:
-      'bg-white text-slate-900 hover:bg-blue-50 active:bg-blue-200 active:text-slate-600 focus-visible:outline-white',
+      'bg-gray-50 text-gray-900 hover:bg-blue-50 active:bg-blue-200 active:text-gray-600 focus-visible:outline-gray-50',
   },
   outline: {
     slate:
-      'ring-slate-200 text-slate-700 hover:text-slate-900 hover:ring-slate-300 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300',
+      'ring-gray-200 text-gray-50 hover:text-gray-100 hover:ring-gray-300 active:bg-gray-100 active:text-gray-100 focus-visible:outline-blue-600 focus-visible:ring-gray-300',
     white:
-      'ring-gray-400 text-white hover:ring-slate-500 active:ring-slate-700 active:text-slate-400 focus-visible:outline-white',
+      'ring-gray-400 text-gray-50 hover:ring-gray-500 active:ring-gray-700 active:text-gray-400 focus-visible:outline-gray-50',
   },
 }
 

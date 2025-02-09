@@ -5,6 +5,32 @@ import { type Config } from 'tailwindcss'
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    colors: {
+      blue: {
+        50: "#9addff",
+        100: "#9addff",
+        200: "#61caff",
+        300: "#3098e3",
+        400: "#1d6dbc",
+        500: "rgb(20, 74, 150)",
+        600: "rgb(18, 52, 106)",
+        700: "#102951",
+        800: "#0d1e38",
+        900: "#08111f",
+      },
+      gray: {
+        50: "#f9fafb",
+        100: "#f3f4f6",
+        200: "#e5e7eb",
+        300: "#d1d5db",
+        400: "#9ca3af",
+        500: "#6b7280",
+        600: "rgb(75, 85, 99)",
+        700: "#374151",
+        800: "#1f2937",
+        900: "#111827",
+      },
+    },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],

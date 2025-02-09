@@ -66,16 +66,16 @@ function MobileNavigation() {
       </PopoverButton>
       <PopoverBackdrop
         transition
-        className="fixed inset-0 bg-slate-300/50 duration-150 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in"
+        className="fixed inset-0 bg-gray-300/50 duration-150 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in"
       />
       <PopoverPanel
         transition
-        className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
+        className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-gray-900 shadow-xl ring-1 ring-gray-900/5 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in"
       >
         <MobileNavLink href="#features">Features</MobileNavLink>
         <MobileNavLink href="#pricing">Pricing</MobileNavLink>
-        <hr className="m-2 border-slate-300/40" />
-        <MobileNavLink href="https://app.devhub.tools">Sign in</MobileNavLink>
+        <hr className="m-2 border-gray-300/40" />
+        <MobileNavLink href="https://github.com/devhub-tools/helm-charts/tree/main/charts/devhub">Sign in</MobileNavLink>
       </PopoverPanel>
     </Popover>
   )
@@ -86,7 +86,7 @@ export function Header() {
     <header className="py-10">
       <Container>
         <nav className="relative z-50 flex justify-between">
-          <div className="flex items-center md:gap-x-12">
+          <div className="flex items-center md:gap-x-6">
             <Link href="#" aria-label="Home">
               <Logo className="h-10 w-auto" />
             </Link>
@@ -96,10 +96,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
-              <NavLink href="https://app.devhub.tools">Sign in</NavLink>
-            </div>
-            <Button href="https://app.devhub.tools" color="blue">
+            <Button href="https://github.com/devhub-tools/helm-charts/tree/main/charts/devhub" color="blue">
               <span>
                 Get started
               </span>

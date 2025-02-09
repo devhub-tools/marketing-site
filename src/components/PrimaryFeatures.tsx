@@ -6,22 +6,33 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import screenshotMetrics from '@/images/screenshots/metrics.png'
-import screenshotPriorities from '@/images/screenshots/priorites.png'
-import screenshotCodeCoverage from '@/images/screenshots/code-coverage.png'
+import screenshotPortal from '@/images/screenshots/portal.png'
+import screenshotTeamMetrics from '@/images/screenshots/team-metrics.png'
+import screenshotQueryView from '@/images/screenshots/query-view.png'
+import screenshotCodeCoverage from '@/images/screenshots/coverbot.png'
+import screenshotUptime from '@/images/screenshots/uptime.png'
 
 const features = [
   {
-    title: 'Developer metrics',
+    title: 'Developer portal',
     description:
-      "Keep track of various metrics including cycle time, completed tickets, and quality.",
-    image: screenshotMetrics,
+      "Allow developers to easily see what they are working on and what they need to do next.",
+    image: screenshotPortal,
   },
   {
-    title: 'Priority planning',
-    description:
-      "Easily plan and view what all developers are working on.",
-    image: screenshotPriorities,
+    title: 'Team metrics',
+    description: "Get insight into your various engineering teams.",
+    image: screenshotTeamMetrics,
+  },
+  {
+    title: 'QueryDesk',
+    description: "Grant secure access to your databases with audit logging and data obfuscation.",
+    image: screenshotQueryView,
+  },
+  {
+    title: 'Uptime',
+    description: "Track your service uptime and latency.",
+    image: screenshotUptime,
   },
   {
     title: 'Code coverage',
@@ -55,11 +66,11 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-gradient-to-br from-sky-400 to-sky-700 pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-gradient-to-br from-blue-300 to-blue-500 pb-28 pt-20 sm:py-32"
     >
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h2 className="font-display text-3xl tracking-tight text-gray-50 sm:text-4xl md:text-5xl">
             Tools to help make your developers more effective.
           </h2>
         </div>
@@ -77,8 +88,8 @@ export function PrimaryFeatures() {
                       className={clsx(
                         'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
                         selectedIndex === featureIndex
-                          ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10'
-                          : 'hover:bg-white/10 lg:hover:bg-white/5',
+                          ? 'bg-gray-50 lg:bg-gray-50/10 lg:ring-1 lg:ring-inset lg:ring-gray-50/10'
+                          : 'hover:bg-gray-50/10 lg:hover:bg-gray-50/5',
                       )}
                     >
                       <h3>
@@ -86,8 +97,8 @@ export function PrimaryFeatures() {
                           className={clsx(
                             'font-display text-lg ui-not-focus-visible:outline-none',
                             selectedIndex === featureIndex
-                              ? 'text-blue-600 lg:text-white'
-                              : 'text-blue-100 hover:text-white lg:text-white',
+                              ? 'text-blue-600 lg:text-gray-50'
+                              : 'text-blue-100 hover:text-gray-50 lg:text-gray-50',
                           )}
                         >
                           <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
@@ -98,8 +109,8 @@ export function PrimaryFeatures() {
                         className={clsx(
                           'mt-2 hidden text-sm lg:block',
                           selectedIndex === featureIndex
-                            ? 'text-white'
-                            : 'text-blue-100 group-hover:text-white',
+                            ? 'text-gray-50'
+                            : 'text-blue-100 group-hover:text-gray-50',
                         )}
                       >
                         {feature.description}
@@ -113,11 +124,11 @@ export function PrimaryFeatures() {
                   <TabPanel key={feature.title} unmount={false}>
                     <div className="relative sm:px-6 lg:hidden">
                       <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
-                      <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
+                      <p className="relative mx-auto max-w-2xl text-base text-gray-50 sm:text-center">
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-gray-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <Image
                         className="w-full"
                         src={feature.image}

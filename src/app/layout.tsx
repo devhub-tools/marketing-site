@@ -6,8 +6,8 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - DevHub',
-    default: 'DevHub',
+    template: '%s - Devhub',
+    default: 'Devhub',
   },
   description:
     'Get detailed insights and metrics into how your engineering team is performing, from cycle time to quality and test coverage.',
