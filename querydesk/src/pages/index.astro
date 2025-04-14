@@ -1,11 +1,917 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <!-- Hero Section -->
+  <section class="hero-gradient py-20 relative">
+    <div class="parallax-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row items-center">
+        <div class="lg:w-1/2 fade-in">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+            Run Production Queries.
+            <span class="block text-blue-400"
+              >The Way Developers Would Build It</span
+            >
+          </h1>
+          <p class="text-sm text-blue-300 -mt-4 mb-4 font-medium italic">
+            (Because Developers Did Build It)
+          </p>
+          <p class="text-xl text-gray-300 mb-8">
+            Querydesk is a developer-first platform that lets your team safely
+            run production database queries in minutes—no demos or sales calls.
+            Unless, of course, you really want to talk to us.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+          >
+            <a
+              href="https://app.querydesk.com/signup"
+              class="btn-primary px-8 py-3 rounded-md font-medium text-center"
+            >
+              Start Your Free Trial
+            </a>
+          </div>
+          <p class="text-gray-400 mt-4 text-sm">
+            Get your first query running in under 5 minutes. No credit card
+            required.
+          </p>
+        </div>
+        <div class="lg:w-1/2 mt-12 lg:mt-0 fade-in">
+          <div class="relative">
+            <!-- Decorative background element -->
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg transform rotate-2"
+            >
+            </div>
+
+            <!-- Screenshot container with shadow and border -->
+            <div
+              class="relative z-10 rounded-lg shadow-2xl border border-gray-800 overflow-hidden"
+            >
+              <img
+                src="https://devhub.tools/_next/static/media/query-view.7d188608.png"
+                alt="Screenshot of Querydesk interface showing a query and the results of a query"
+                class="w-full h-auto"
+              />
+
+              <!-- Overlay caption -->
+            </div>
+
+            <!-- Badge overlay -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Video Section -->
+  <section id="how-it-works" class="py-20 bg-gray-900 relative">
+    <div class="parallax-bg"></div>
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Querydesk: A Primer On Query Modernization
+        </h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          See how Querydesk transforms database operations from chaotic to
+          controlled in just a few minutes.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <!-- Video Placeholder with Play Button -->
+        <div
+          class="relative overflow-hidden rounded-lg shadow-2xl border border-gray-700 bg-gray-800"
+          style="height: 0; padding-bottom: 56.25%;"
+        >
+          <!-- 16:9 Aspect Ratio -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center">
+              <div
+                class="inline-block border-2 border-blue-400 rounded-full p-6 mb-4 hover:bg-blue-400/20 transition-colors cursor-pointer"
+              >
+                <svg
+                  class="w-16 h-16 text-blue-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <p class="text-gray-400 font-medium">Watch the demo (4:52)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Details -->
+        <div
+          class="mt-6 flex flex-col md:flex-row justify-between text-gray-400 text-sm"
+        >
+          <div class="flex items-center mb-4 md:mb-0">
+            <svg
+              class="w-5 h-5 mr-2 text-blue-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>4 minutes, 52 seconds</span>
+          </div>
+
+          <div class="flex items-center">
+            <svg
+              class="w-5 h-5 mr-2 text-blue-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              ></path>
+            </svg>
+            <span>Full transcript available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Top Three Features Section -->
+  <section class="py-16 bg-gradient-to-b from-gray-900 to-black relative">
+    <div class="parallax-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8 relative z-10">
+        <!-- Feature 1 -->
+        <div
+          class="feature-card rounded-lg p-6"
+          style="background-color: #102951;"
+        >
+          <div class="flex items-center space-x-4 mb-3">
+            <div class="p-3 rounded-full bg-blue-500 bg-opacity-20">
+              <svg
+                class="w-10 h-10"
+                style="color: #dda853;"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Abstract Branch Representation -->
+                <path d="M7 5a2 2 0 104 0 2 2 0 00-4 0z" fill="currentColor"
+                ></path>
+                <path d="M7 19a2 2 0 104 0 2 2 0 00-4 0z" fill="currentColor"
+                ></path>
+                <path d="M17 12a2 2 0 104 0 2 2 0 00-4 0z" fill="currentColor"
+                ></path>
+                <path
+                  d="M9 7v8a2 2 0 002 2h4"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"></path>
+                <path
+                  d="M19 10v-1a2 2 0 00-2-2h-6"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">
+              PR Workflow for Queries
+            </h3>
+          </div>
+          <p class="text-white text-opacity-90 mb-4 font-light text-lg">
+            Break stuff less. Collaborate more.
+          </p>
+          <ul
+            class="text-white text-opacity-80 space-y-2 list-disc pl-5 font-light"
+          >
+            <li>
+              Other tools want you to "schedule a demo"—we just want you to ship
+              safely.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Feature 2 -->
+        <div
+          class="feature-card rounded-lg p-6"
+          style="background-color: #102951;"
+        >
+          <div class="flex items-center space-x-4 mb-3">
+            <div class="p-3 rounded-full bg-blue-500 bg-opacity-20">
+              <svg
+                class="w-10 h-10"
+                style="color: #dda853;"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Shield with Checkmark -->
+                <path
+                  d="M12 2L3 7v6c0 5.1 3.78 9.84 9 10.5 5.22-.66 9-5.4 9-10.5V7l-9-5z"
+                  stroke="currentColor"
+                  stroke-width="1.5"></path>
+                <path
+                  d="M8 11l3 3 5-5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">
+              Approval Flow for Queries
+            </h3>
+          </div>
+          <p class="text-white text-opacity-90 mb-4 font-light text-lg">
+            Because production data deserves a second set of eyes.
+          </p>
+          <ul
+            class="text-white text-opacity-80 space-y-2 list-disc pl-5 font-light"
+          >
+            <li>Two-key security for your queries.</li>
+            <li>No more cowboy SQL in prod.</li>
+            <li>
+              Most tools obsess over dashboards—we obsess over ops sanity.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Feature 3 -->
+        <div
+          class="feature-card rounded-lg p-6"
+          style="background-color: #102951;"
+        >
+          <div class="flex items-center space-x-4 mb-3">
+            <div class="p-3 rounded-full bg-blue-500 bg-opacity-20">
+              <svg
+                class="w-10 h-10"
+                style="color: #dda853;"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Eye with Slash (Privacy/Hidden) -->
+                <path
+                  d="M2 12C2 12 5 5 12 5C19 5 22 12 22 12C22 12 19 19 12 19C5 19 2 12 2 12Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"></path>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="3"
+                  stroke="currentColor"
+                  stroke-width="1.5"></circle>
+                <path
+                  d="M4 4L20 20"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">
+              Obfuscation, by Default
+            </h3>
+          </div>
+          <p class="text-white text-opacity-90 mb-4 font-light text-lg">
+            Your data is sacred. Don't let it leak.
+          </p>
+          <ul
+            class="text-white text-opacity-80 space-y-2 list-disc pl-5 font-light"
+          >
+            <li>Auto-masking that's smarter than DIY scripts.</li>
+            <li>
+              No clunky configs, no risky exports—just clean, safe results every
+              time.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Additional Features Section -->
+  <section id="features" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          We focused on building the features developers want, not what sales
+          teams need to upsell.
+        </p>
+      </div>
+
+      <!-- Feature Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+        <!-- Feature 1: Audit Trails -->
+        <div
+          class="bg-gray-800 rounded-lg p-6 border border-gray-700 interactive-card glow-on-hover"
+        >
+          <div class="text-blue-400 mb-4">
+            <svg
+              class="w-12 h-12"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Audit Trails, Always On</h3>
+          <p class="text-gray-400 mb-4">SOC2 isn't a side project.</p>
+          <ul class="text-gray-400 space-y-2 list-disc pl-5">
+            <li>Audits on autopilot.</li>
+            <li>Stay ready without lifting a finger.</li>
+            <li>Compliance isn't a headache—it's a feature.</li>
+          </ul>
+        </div>
+
+        <!-- Feature 2: AI -->
+        <div
+          class="bg-gray-800 rounded-lg p-6 border border-gray-700 interactive-card glow-on-hover"
+        >
+          <div class="text-blue-400 mb-4">
+            <svg
+              class="w-12 h-12"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">
+            AI That Knows SQL (and Doesn't Judge)
+          </h3>
+          <p class="text-gray-400 mb-4">
+            Not everyone's fluent in SELECT * FROM.
+          </p>
+          <ul class="text-gray-400 space-y-2 list-disc pl-5">
+            <li>
+              Our AI writes smart queries across any database—so your whole team
+              can self-serve without a panic attack.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Feature 3: Self-Serve -->
+        <div
+          class="bg-gray-800 rounded-lg p-6 border border-gray-700 interactive-card glow-on-hover"
+        >
+          <div class="text-blue-400 mb-4">
+            <svg
+              class="w-12 h-12"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">
+            Self-Serve. Dev-First. Zero Sales Pitches.
+          </h3>
+          <p class="text-gray-400 mb-4">
+            You don't need sales to query a database.
+          </p>
+          <ul class="text-gray-400 space-y-2 list-disc pl-5">
+            <li>Try it now, not after six Zoom calls.</li>
+            <li>
+              We're built for product-led growth—while the old guard's still
+              chasing RFPs.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Feature 4: Workflows -->
+        <div
+          class="bg-gray-800 rounded-lg p-6 border border-gray-700 interactive-card glow-on-hover"
+        >
+          <div class="text-blue-400 mb-4">
+            <svg
+              class="w-12 h-12"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Workflows, To Work and Flow</h3>
+          <p class="text-gray-400 mb-4">
+            Provides that automation magic to banish toil to the Thirteenth
+            Realm.
+          </p>
+          <ul class="text-gray-400 space-y-2 list-disc pl-5">
+            <li>Built on Querydesk's feature set.</li>
+            <li>
+              Create workflows that cater to your style, not the other way
+              around.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Feature 5: PII Protection -->
+        <div
+          class="bg-gray-800 rounded-lg p-6 border border-gray-700 interactive-card glow-on-hover"
+        >
+          <div class="text-blue-400 mb-4">
+            <svg
+              class="w-12 h-12"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Protect PII On Demand</h3>
+          <p class="text-gray-400 mb-4">
+            Smart detection and masking of sensitive data without complex
+            configuration.
+          </p>
+        </div>
+
+        <!-- Feature 6: Multi-DB Support -->
+        <div
+          class="bg-gray-800 rounded-lg p-6 border border-gray-700 interactive-card glow-on-hover"
+        >
+          <div class="text-blue-400 mb-4">
+            <svg
+              class="w-12 h-12"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Multi-DB Support</h3>
+          <p class="text-gray-400 mb-4">
+            Connect to PostgreSQL, MongoDB, and BigQuery with the same
+            interface.
+          </p>
+        </div>
+      </div>
+      <div></div>
+
+      <!-- 6. Testimonials Section -->
+      <section class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+              Obligatory testimonials from amazing people that love Querydesk.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-gray-800 rounded-lg p-8 border border-gray-700 interactive-card animated-border"
+            >
+              <div class="flex items-center mb-4">
+                <div class="text-blue-400">
+                  <svg
+                    class="w-10 h-10"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <p class="mb-6 text-gray-300 italic">
+                "Devhub has solved so many challenges that come with being SOC 2
+                compliant and general best practice. It's AI features let us
+                safely and easily let anyone in the company answer their own
+                questions. Query approvals let developers do their job easily
+                while making sure our prod db is safe. Code coverage and
+                analytics all in a self hosted package mean easier security
+                conversations with our customers. It really is a godsend."
+              </p>
+              <div>
+                <p class="font-bold">Adam K.</p>
+                <p class="text-gray-400 text-sm">CTO, Jump</p>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-gray-800 rounded-lg p-8 border border-gray-700 interactive-card animated-border"
+            >
+              <div class="flex items-center mb-4">
+                <div class="text-blue-400">
+                  <svg
+                    class="w-10 h-10"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <p class="mb-6 text-gray-300 italic">
+                "Compliance requirements around production data has always
+                required significant internal tool development for my previous
+                engineering teams. It was a lot of effort that still felt subpar
+                and left engineers feeling handcuffed when trying to solve data
+                issues in production. Once we implemented QueryDesk, within a
+                day, our teams gained access to production data with valid
+                controls and seamless ability to restrict and redact controlled
+                data. It was a lifesaver. We also gained enhanced team metrics
+                that helped uncover bottlenecks in our team processes. Code
+                coverage reporting was another plus. The entire suite of tools
+                were a big win with very little implementation effort."
+              </p>
+              <div>
+                <p class="font-bold">Kyle K.</p>
+                <p class="text-gray-400 text-sm">CEO, Stealth Startup</p>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div
+              class="bg-gray-800 rounded-lg p-8 border border-gray-700 interactive-card animated-border"
+            >
+              <div class="flex items-center mb-4">
+                <div class="text-blue-400">
+                  <svg
+                    class="w-10 h-10"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <p class="mb-6 text-gray-300 italic">
+                "Our compliance team loves the audit trails, and developers love
+                that they can run production queries without jumping through
+                hoops. Win-win."
+              </p>
+              <div>
+                <p class="font-bold">Alex Rivera</p>
+                <p class="text-gray-400 text-sm">CTO, DataSecure</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Bottom CTA Section -->
+      <section class="py-16 hero-gradient relative">
+        <div class="parallax-bg"></div>
+        <div class="gradient-overlay"></div>
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold mb-6">
+            Ready to stop fretting with database access?
+          </h2>
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Jump straight into queries that don't break prod, don't leak PII,
+            and don't require six approval emails and a small blood sacrifice.
+          </p>
+          <div
+            class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <a
+              href="https://app.querydesk.com/signup"
+              class="btn-primary px-8 py-3 rounded-md font-medium"
+            >
+              Start Your Free Trial
+            </a>
+            <p class="text-gray-400 text-sm md:ml-2">
+              No credit card, no sales calls. Unless you're into that sort of
+              thing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Footer -->
+      <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col md:flex-row justify-between">
+            <div class="mb-8 md:mb-0">
+              <div class="flex items-center mb-4">
+                <svg
+                  class="h-8 w-8 mr-2"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20C5 11.7157 11.7157 5 20 5C28.2843 5 35 11.7157 35 20Z"
+                    stroke="#3490dc"
+                    stroke-width="2"></path>
+                  <path
+                    d="M15 15L25 25M25 15L15 25"
+                    stroke="#3490dc"
+                    stroke-width="2"
+                    stroke-linecap="round"></path>
+                  <path
+                    d="M20 10V20M20 20L25 25"
+                    stroke="#3490dc"
+                    stroke-width="2"
+                    stroke-linecap="round"></path>
+                </svg>
+                <span class="text-xl font-bold">Querydesk</span>
+              </div>
+              <p class="text-gray-400 max-w-xs">
+                Developer-first database query platform with built-in compliance
+                and security.
+              </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+              <div>
+                <h4 class="text-lg font-semibold mb-4">Product</h4>
+                <ul class="space-y-2">
+                  <li>
+                    <a href="/pricing" class="text-gray-400 hover:text-gray-300"
+                      >Features</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/pricing" class="text-gray-400 hover:text-gray-300"
+                      >Pricing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/security"
+                      class="text-gray-400 hover:text-gray-300">Security</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                <ul class="space-y-2">
+                  <li>
+                    <a
+                      href="https://docs.querydesk.com"
+                      class="text-gray-400 hover:text-gray-300">Documentation</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/why-querydesk"
+                      class="text-gray-400 hover:text-gray-300">Why Querydesk</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/support" class="text-gray-400 hover:text-gray-300"
+                      >Support</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-4">Company</h4>
+                <ul class="space-y-2">
+                  <li>
+                    <a href="/about" class="text-gray-400 hover:text-gray-300"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/about" class="text-gray-400 hover:text-gray-300"
+                      >Careers</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/about" class="text-gray-400 hover:text-gray-300"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center"
+          >
+            <div class="text-gray-500 text-sm mb-4 md:mb-0">
+              © 2025 Querydesk, Inc. All rights reserved.
+            </div>
+            <div class="flex space-x-6">
+              <a href="#" class="text-gray-400 hover:text-blue-400">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"
+                  ><path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  ></path></svg
+                >
+              </a>
+              <a href="#" class="text-gray-400 hover:text-blue-400">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"
+                  ><path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  ></path></svg
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <script>
+    // Simple JavaScript for interactions
+    document.addEventListener("DOMContentLoaded", function () {
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.querySelector(".md\\:hidden");
+      const mobileMenu = document.createElement("div");
+      mobileMenu.className =
+        "fixed inset-0 bg-gray-900 bg-opacity-95 z-50 transform translate-x-full transition-transform duration-300 ease-in-out";
+      mobileMenu.innerHTML = `
+                <div class="flex justify-end p-6">
+                    <button class="focus:outline-none text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="flex flex-col items-center space-y-8 mt-10 text-xl">
+                    <a href="/why-querydesk" class="text-white hover:text-blue-400">Why Querydesk</a>
+                    <a href="/pricing" class="text-white hover:text-blue-400">Pricing</a>
+                    <a href="/products" class="text-white hover:text-blue-400">Products</a>
+                    <a href="/about" class="text-white hover:text-blue-400">About</a>
+                    <a href="https://docs.querydesk.com" class="text-white hover:text-blue-400">Docs</a>
+                    <a href="https://app.querydesk.com/login" class="text-white hover:text-blue-400 mt-8">Login</a>
+                    <a href="https://app.querydesk.com/signup" class="btn-primary px-6 py-2 rounded-md font-medium mt-4">Start Trial</a>
+                </nav>
+            `;
+
+      document.body.appendChild(mobileMenu);
+
+      let mobileMenuOpen = false;
+
+      mobileMenuButton.addEventListener("click", function () {
+        if (mobileMenuOpen) {
+          mobileMenu.classList.add("translate-x-full");
+        } else {
+          mobileMenu.classList.remove("translate-x-full");
+        }
+        mobileMenuOpen = !mobileMenuOpen;
+      });
+
+      mobileMenu.querySelector("button").addEventListener("click", function () {
+        mobileMenu.classList.add("translate-x-full");
+        mobileMenuOpen = false;
+      });
+
+      // Handle mobile menu link clicks
+      mobileMenu.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function () {
+          mobileMenu.classList.add("translate-x-full");
+          mobileMenuOpen = false;
+        });
+      });
+
+      // Add fade-in animation to elements as they scroll into view
+      const observeElements = document.querySelectorAll(
+        ".feature-card, .bg-gray-800"
+      );
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      observeElements.forEach((element) => {
+        observer.observe(element);
+      });
+
+      // Add subtle parallax effect
+      window.addEventListener("scroll", function () {
+        const parallaxElements = document.querySelectorAll(".parallax-bg");
+        const scrollPosition = window.pageYOffset;
+
+        parallaxElements.forEach((element) => {
+          element.style.transform = `translateY(${scrollPosition * 0.05}px)`;
+        });
+      });
+
+      // Add tilt effect to interactive cards
+      const cards = document.querySelectorAll(".interactive-card");
+
+      cards.forEach((card) => {
+        card.addEventListener("mousemove", function (e) {
+          const rect = this.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          const xPercent = x / rect.width - 0.5;
+          const yPercent = y / rect.height - 0.5;
+
+          const rotateX = yPercent * -5;
+          const rotateY = xPercent * 5;
+
+          this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.transform =
+            "perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)";
+        });
+      });
+
+      // Add floating animation to specific elements
+      const floatingElements = document.querySelectorAll(".btn-primary");
+      floatingElements.forEach((element) => {
+        element.classList.add("floating");
+      });
+    });
+  </script>
 </Layout>
