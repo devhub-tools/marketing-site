@@ -152,25 +152,6 @@ body {
   height: 100%;
 }
 
-/* Floating elements */
-.floating {
-  animation: floating 3s ease-in-out infinite;
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 /* Subtle gradient overlays */
 .gradient-overlay {
   position: absolute;
@@ -210,25 +191,6 @@ body {
   box-shadow: 0 0 15px rgba(52, 144, 220, 0.6);
 }
 
-/* Animated border */
-.animated-border {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.animated-border::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(52, 144, 220, 0.2), transparent);
-  transform: rotate(45deg);
-  animation: borderAnimation 3s linear infinite;
-}
-
 @keyframes borderAnimation {
   0% {
     transform: rotate(45deg) translateX(-100%);
@@ -242,35 +204,6 @@ body {
 /* Glow effects */
 .glow-on-hover:hover {
   box-shadow: 0 0 15px rgba(52, 144, 220, 0.6);
-}
-
-/* Animated border */
-.animated-border {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.animated-border::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(52, 144, 220, 0.2), transparent);
-  transform: rotate(45deg);
-  animation: borderAnimation 3s linear infinite;
-}
-
-@keyframes borderAnimation {
-  0% {
-    transform: rotate(45deg) translateX(-100%);
-  }
-
-  100% {
-    transform: rotate(45deg) translateX(100%);
-  }
 }
 
 .feature-item {
