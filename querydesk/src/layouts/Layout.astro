@@ -25,96 +25,53 @@ import Footer from "../components/Footer.astro";
     <script>
       // Simple JavaScript for interactions
       document.addEventListener("DOMContentLoaded", function () {
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-              window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-
         // Mobile menu toggle
-        const mobileMenuButton = document.querySelector(".md\\:hidden");
-        const mobileMenu = document.createElement("div");
-        mobileMenu.className =
-          "fixed inset-0 bg-gray-900 bg-opacity-95 z-50 transform translate-x-full transition-transform duration-300 ease-in-out";
-        mobileMenu.innerHTML = `
-                  <div class="flex justify-end p-6">
-                      <button class="focus:outline-none text-white">
-                          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                          </svg>
-                      </button>
-                  </div>
-                  <nav class="flex flex-col items-center space-y-8 mt-10 text-xl">
-                      <a href="/why-querydesk" class="text-white hover:text-blue-400">Why Querydesk</a>
-                      <a href="/pricing" class="text-white hover:text-blue-400">Pricing</a>
-                      <a href="/products" class="text-white hover:text-blue-400">Products</a>
-                      <a href="/about" class="text-white hover:text-blue-400">About</a>
-                      <a href="https://docs.querydesk.com" class="text-white hover:text-blue-400">Docs</a>
-                      <a href="https://app.querydesk.com/login" class="text-white hover:text-blue-400 mt-8">Login</a>
-                      <a href="https://app.querydesk.com/signup" class="btn-primary px-6 py-2 rounded-md font-medium mt-4">Start Trial</a>
-                  </nav>
-              `;
-
-        document.body.appendChild(mobileMenu);
-
-        let mobileMenuOpen = false;
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenuCloseButton = document.getElementById(
+          "mobile-menu-close-button"
+        );
+        const mobileMenu = document.getElementById("mobile-menu");
 
         mobileMenuButton.addEventListener("click", function () {
-          if (mobileMenuOpen) {
-            mobileMenu.classList.add("translate-x-full");
-          } else {
-            mobileMenu.classList.remove("translate-x-full");
-          }
-          mobileMenuOpen = !mobileMenuOpen;
+          mobileMenu?.classList.toggle("translate-x-full");
         });
 
-        mobileMenu
-          .querySelector("button")
-          .addEventListener("click", function () {
-            mobileMenu.classList.add("translate-x-full");
-            mobileMenuOpen = false;
-          });
+        mobileMenuCloseButton.addEventListener("click", function () {
+          mobileMenu?.classList.add("translate-x-full");
+        });
 
         // Handle mobile menu link clicks
         mobileMenu.querySelectorAll('a[href^="#"]').forEach((anchor) => {
           anchor.addEventListener("click", function () {
-            mobileMenu.classList.add("translate-x-full");
+            mobileMenu?.classList.add("translate-x-full");
             mobileMenuOpen = false;
           });
         });
 
         // Add fade-in animation to elements as they scroll into view
         const observeElements = document.querySelectorAll(
-          ".feature-card, .bg-gray-800"
+          ".feature-card, .pricing-card, .interactive-card"
         );
 
-        // TODO: make this a generic class
-        // const observeElements = document.querySelectorAll(
-        //   ".pricing-card, .feature-item"
-        // );
+        // Initialize cards as invisible before observation
+        observeElements.forEach((element) => {
+          element.style.opacity = "0";
+        });
 
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                entry.target.classList.add("fade-in");
+                // Smoothly transition from invisible to visible
+                entry.target.style.opacity = "1";
+                entry.target.style.transition = "opacity 0.5s ease-in-out";
                 observer.unobserve(entry.target);
               }
             });
           },
           {
             threshold: 0.1,
+            rootMargin: "50px",
           }
         );
 
