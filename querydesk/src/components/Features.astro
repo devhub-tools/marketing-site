@@ -1,0 +1,66 @@
+---
+import FeatureCard from "../components/FeatureCard.astro";
+---
+
+<section class="py-16" style="background-color: #08111F;">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12 text-center">All plans include</h2>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <FeatureCard title="PR Workflow for Queries">
+        <li>Break stuff less. Collaborate more.</li>
+        <li>Ship safely without changing how your team works.</li>
+        <li>Familiar workflows that reduce friction and prevent mistakes.</li>
+      </FeatureCard>
+
+      <!-- Feature 2: Approval Flow -->
+      <FeatureCard title="Approval Flow for Queries">
+        <li>Two-key security for your production data.</li>
+        <li>No more cowboy SQL in prod.</li>
+        <li>Human checkpoints for sensitive queries.</li>
+      </FeatureCard>
+
+      <FeatureCard title="Obfuscation, by Default">
+        <li>Auto-masking that's smarter than DIY scripts.</li>
+        <li>No clunky configs, no risky exports.</li>
+        <li>Your sensitive data stays protected, always.</li>
+      </FeatureCard>
+
+      <FeatureCard title="Audit Trails, Always On">
+        <li>SOC2 isn't a side project.</li>
+        <li>Compliance on autopilot, no configuration needed.</li>
+        <li>Instant readiness for audits, any time.</li>
+      </FeatureCard>
+
+      <FeatureCard title="AI That Knows SQL">
+        <li>Not everyone's fluent in SELECT * FROM.</li>
+        <li>Smart queries across any database.</li>
+        <li>Your whole team can self-serve without panic attacks.</li>
+      </FeatureCard>
+
+      <FeatureCard title="Self-Serve. Dev-First.">
+        <li>Try it now, not after six Zoom calls.</li>
+        <li>Built for product-led growth.</li>
+        <li>You don't need a sales person to query a database.</li>
+      </FeatureCard>
+
+      <FeatureCard title="Multi-DB Support">
+        <li>PostgreSQL, MongoDB, BigQuery, and more.</li>
+        <li>One interface for all your databases.</li>
+        <li>No vendor lock-in, just pure flexibility.</li>
+      </FeatureCard>
+
+      <FeatureCard title="Protect PII On Demand">
+        <li>Smart detection of sensitive data.</li>
+        <li>No complex configuration needed.</li>
+        <li>Protect what matters with minimal effort.</li>
+      </FeatureCard>
+
+      <FeatureCard title="Workflows, To Work and Flow">
+        <li>Automation magic to banish toil.</li>
+        <li>Create workflows that cater to your style.</li>
+        <li>Keep engineers doing what they do best—building.</li>
+      </FeatureCard>
+    </div>
+  </div>
+</section>

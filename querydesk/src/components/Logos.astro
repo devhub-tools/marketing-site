@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import pdq from "../assets/logos/pdq-logo.svg";
+import jump from "../assets/logos/jump-logo.svg";
+---
+
+<section class="py-20 bg-gray-900 relative">
+  <div class="container mx-auto px-6">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div
+        class="mx-auto grid max-w-lg grid-cols-1 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-4"
+      >
+        <Image
+          src={pdq}
+          alt="PDQ"
+          class="h-10 col-start-2 col-span-1 max-h-12 w-full object-contain"
+        />
+        <Image
+          src={jump}
+          alt="Jump"
+          class="h-10 col-span-1 max-h-12 w-full object-contain"
+        />
+      </div>
+    </div>
+  </div>
+</section>
