@@ -2,10 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import TeamMember from "../components/TeamMember.astro";
 
-import michael from "../assets/employees/michael.png";
-import josh from "../assets/employees/josh.png";
-import callie from "../assets/employees/callie.png";
-import brigg from "../assets/employees/brigg.png";
+import { Image } from "astro:assets";
+import michael from "../assets/michael.png";
+import josh from "../assets/josh.png";
+import callie from "../assets/callie.png";
+import brigg from "../assets/brigg.png";
+import gaia from "../assets/gaia.png";
+import tayls from "../assets/tayls.png";
+import austin from "../assets/austin.png";
+import brianna from "../assets/brianna.png";
 ---
 
 <Layout>
@@ -20,33 +25,52 @@ import brigg from "../assets/employees/brigg.png";
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Team Member 1 -->
         <TeamMember
-          name="Michael St Clair"
-          title="CTO & Principal Architect"
-          description="Leading the technical vision and architecture of QueryDesk. Passionate about creating robust, scalable systems that solve real developer problems."
-          image={michael}
+          name="Austin"
+          description="Frontend engineer dedicated to creating intuitive user interfaces for complex database operations. Believes in making powerful tools accessible to all developers."
+          image={austin}
         />
 
         <TeamMember
-          name="Josh Mackelprang"
-          title="CEO"
-          description="Driving the vision and strategy for QueryDesk with a focus on building products that developers actually want to use, without the enterprise sales friction."
-          image={josh}
+          name="Brianna"
+          description="DevOps engineer specializing in database deployment and monitoring. Ensures our systems are performant, secure, and always available."
+          image={brianna}
+        />
+
+        <TeamMember
+          name="Brigg Angus"
+          description="Overseeing operations and ensuring QueryDesk delivers a seamless experience from signup to daily use with a focus on developer productivity."
+          image={brigg}
         />
 
         <TeamMember
           name="Callie Birdsall-Chambers"
-          title="CMO"
           description="Leading marketing strategy with a focus on developer-first messaging that respects the intelligence and time of technical audiences."
           image={callie}
         />
 
         <TeamMember
-          name="Brigg Angus"
-          title="COO"
-          description="Overseeing operations and ensuring QueryDesk delivers a seamless experience from signup to daily use with a focus on developer productivity."
-          image={brigg}
+          name="Gaia"
+          description="Full-stack engineer specializing in database optimization and query performance. Passionate about building efficient systems that scale with user needs."
+          image={gaia}
+        />
+
+        <TeamMember
+          name="Josh Mackelprang"
+          description="Driving the vision and strategy for QueryDesk with a focus on building products that developers actually want to use, without the enterprise sales friction."
+          image={josh}
+        />
+
+        <TeamMember
+          name="Michael St Clair"
+          description="Leading the technical vision and architecture of QueryDesk. Passionate about creating robust, scalable systems that solve real developer problems."
+          image={michael}
+        />
+
+        <TeamMember
+          name="Tayls"
+          description="Backend engineer with expertise in distributed systems and database architecture. Focused on creating robust and reliable database solutions."
+          image={tayls}
         />
       </div>
     </div>
