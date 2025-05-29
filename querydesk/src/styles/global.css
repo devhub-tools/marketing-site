@@ -1,11 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #0e141b;
-  --secondary: #1e2731;
-  --accent: #3490dc;
-  --accent-gold: #DDA853;
-  --text: #f0f4f8;
+  --primary: #1A7F8C;
+  --primary-dark: #145C66;
+  --secondary: #D17B5E;
+  --accent: #DCA73A;
+  --background: #F2EEE5;
+  --text: #1E3346;
+  --text-light: #4A5568;
+  --text-lighter: #718096;
+  --interactive: #4A9EFF;
+  --interactive-hover: #60A5FA;
+  --fresh: #10B981;
+  --soft-teal: #06B6D4;
 }
 
 html,
@@ -16,27 +23,29 @@ body {
 }
 
 body {
-  background-color: var(--primary);
+  background-color: var(--background);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #2C5F6A 100%);
 }
 
 .feature-card {
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(30, 51, 70, 0.1);
+  background-color: white;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(30, 51, 70, 0.1);
 }
 
 .important-card {
-  background-color: #102951;
+  background-color: var(--primary);
+  color: white;
 }
 
 .important-card h3 {
@@ -57,30 +66,30 @@ body {
 }
 
 .important-card svg {
-  color: var(--accent-gold);
+  color: var(--accent);
 }
 
 .btn-primary {
-  background-color: var(--accent);
+  background-color: var(--secondary);
   color: white;
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #2779bd;
+  background-color: #B86A4E;
   transform: translateY(-2px);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
   transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  background-color: var(--secondary);
+  color: white;
   transform: translateY(-2px);
 }
 
@@ -91,7 +100,7 @@ body {
 }
 
 .highlight {
-  color: #3490dc;
+  color: var(--accent);
 }
 
 /* Animations */
@@ -118,6 +127,7 @@ body {
 
 /* For dark mode toggle and navbar */
 .nav-link {
+  color: var(--text);
   position: relative;
 }
 
@@ -128,7 +138,7 @@ body {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: var(--accent);
+  background-color: var(--primary);
   transition: width 0.3s ease;
 }
 
@@ -159,30 +169,28 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at top right, rgba(52, 144, 220, 0.15), transparent 70%);
+  background: radial-gradient(circle at top right, rgba(26, 127, 140, 0.15), transparent 70%);
   pointer-events: none;
 }
 
 /* Interactive card hover effects */
 .interactive-card {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: white;
+  border: 1px solid rgba(30, 51, 70, 0.1);
 }
 
 .interactive-card:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(30, 51, 70, 0.1);
 }
 
 .pricing-card {
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  background-color: white;
+  border: 1px solid rgba(30, 51, 70, 0.1);
 }
 
 .pricing-card-featured {
-  border: 1px solid var(--accent);
+  border: 2px solid var(--primary);
 }
 
 /* Subtle parallax effect */
@@ -200,35 +208,64 @@ body {
 
 /* Glow effects */
 .glow:hover {
-  box-shadow: 0 0 15px rgba(52, 144, 220, 0.6);
+  box-shadow: 0 0 15px rgba(26, 127, 140, 0.6);
 }
 
 .feature-icon {
-  color: var(--accent-gold);
+  color: var(--accent);
 }
 
 .warning-icon {
-  color: #fcd34d;
+  color: var(--secondary);
 }
 
 .check-icon {
-  color: #10b981;
+  color: var(--primary);
 }
 
 /* About page */
 
 .value-card {
-  background-color: var(--secondary);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  background-color: white;
+  border: 1px solid rgba(30, 51, 70, 0.1);
 }
 
 .value-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(30, 51, 70, 0.1);
 }
 
 .feature-list {
   background-color: rgba(16, 41, 81, 0.5);
 }
+
+/* Header and Footer specific styles */
+header, footer {
+  background-color: #08111F;
+  color: white;
+}
+
+header .nav-link {
+  color: white;
+}
+
+header .nav-link:hover {
+  color: var(--interactive);
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer a:hover {
+  color: var(--interactive);
+}
+
+/* Text color utilities */
+.text-primary { color: var(--text); }
+.text-secondary { color: var(--text-light); }
+.text-muted { color: var(--text-lighter); }
+.text-white { color: white; }
+.text-interactive { color: var(--interactive); }
+.text-fresh { color: var(--fresh); }
+.text-soft-teal { color: var(--soft-teal); }
