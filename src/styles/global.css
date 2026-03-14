@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue-50: rgb(154 221 255);
+  --color-blue-100: rgb(154 221 255);
+  --color-blue-200: rgb(97 202 255);
+  --color-blue-300: rgb(48 152 227);
+  --color-blue-400: rgb(29 109 188);
+  --color-blue-500: rgb(20 74 150);
+  --color-blue-600: rgb(18 52 106);
+  --color-blue-700: rgb(16 41 81);
+  --color-blue-800: rgb(13 30 56);
+  --color-blue-900: rgb(8 17 31);
+
+  --color-surface-0: rgb(216 223 235);
+  --color-surface-1: rgb(228 233 242);
+  --color-surface-2: rgb(237 241 247);
+  --color-surface-3: rgb(245 247 250);
+  --color-surface-4: rgb(255 255 255);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

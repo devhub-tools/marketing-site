@@ -1,17 +1,47 @@
 ---
-
+import "../styles/global.css";
+import Hero from "../components/Hero.astro";
+import Logos from "../components/Logos.astro";
+import FeatureHighlight from "../components/FeatureHighlight.astro";
+import WhatsNew from "../components/WhatsNew.astro";
+import Pricing from "../components/Pricing.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Footer from "../components/Footer.astro";
+import FeatureGrid from "../components/FeatureGrid.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="QueryDesk" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width" />
+    <title>
+      QueryDesk - A dev-first platform for secure, scalable querying
+    </title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="text-gray-900 overflow-x-hidden">
+    <main class="flex flex-col gap-24">
+      <Hero />
+      <Logos />
+      <FeatureHighlight />
+      <FeatureGrid />
+      <WhatsNew />
+      <Pricing />
+      <Testimonials />
+      <Footer />
+    </main>
+  </body>
 </html>

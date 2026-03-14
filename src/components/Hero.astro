@@ -1,0 +1,43 @@
+---
+import Header from "../components/Header.astro";
+---
+
+<section class="h-screen relative">
+  <div class="absolute inset-6 rounded-3xl overflow-hidden">
+    <Header />
+
+    <div class="absolute inset-0 z-0">
+      <div id="unicorn" class="absolute inset-0"></div>
+      <div class="absolute inset-0 backdrop-blur-md bg-blue-900/30"></div>
+    </div>
+
+    <div
+      class="relative flex flex-col items-center justify-center h-full text-center gap-10 -mt-30"
+    >
+      <h1 class="text-gray-50 text-6xl">
+        A dev-first platform for<br />secure, scalable querying
+      </h1>
+      <a
+        href="https://auth.devhub.cloud/signup"
+        class="rounded-full w-60 py-3 text-gray-50 bg-blue-300 text-lg"
+      >
+        Get started
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  import "../scripts/unicornStudio.umd.js";
+
+  UnicornStudio.addScene({
+    elementId: "unicorn",
+    filePath: "/hero-webgl.json",
+    interactivity: {
+      mouse: {
+        disableMobile: false,
+        disabled: false,
+      },
+    },
+  });
+</script>
