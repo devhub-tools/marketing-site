@@ -27,9 +27,8 @@ import Header from "../components/Header.astro";
   </div>
 </section>
 
+<script is:inline src="/unicornStudio.umd.js"></script>
 <script>
-  import "../scripts/unicornStudio.umd.js";
-
   UnicornStudio.addScene({
     elementId: "unicorn",
     filePath: "/hero-webgl.json",
